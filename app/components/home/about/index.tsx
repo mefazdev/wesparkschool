@@ -40,11 +40,11 @@ export default function About() {
               Every child is uniquely gifted, with their own learning style and
               growth pace. A team of seasoned educators, with over 40 years of
               expertise, has crafted a personalized approach to unlock each
-              child's potential.{" "}
+              child&apos;s potential.{" "}
             </p>
             <p
               className={`${montserrat.className} text-white md:text-lg mt-6 leading-relaxed`}
-            >
+            > 
               Welcome to We Spark International School, where cultural heritage
               meets holistic development. Our interconnected national and
               international curriculum delivers exceptional education. Within a

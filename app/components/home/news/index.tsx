@@ -1,4 +1,4 @@
-import { montserrat, poppins } from "@/app/ui/fonts";
+import { poppins } from "@/app/ui/fonts";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

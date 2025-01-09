@@ -12,7 +12,7 @@ export default function Hero() {
  
   const [showContent, setShowContent] = useState(true);
 
-  var settings = {
+ const settings = {
     dots: false,
     infinite: true,
     slidesToShow: 1,
