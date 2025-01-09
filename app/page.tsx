@@ -7,7 +7,7 @@ import News from "./components/home/news";
 import Amenities from "./components/home/amenities";
 export default function Home() {
   return (
-   <div className="bg-white">
+   <div className="bg-white" >
        <Hero/>
        <Admission/>
 

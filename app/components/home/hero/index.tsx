@@ -53,7 +53,7 @@ export default function Hero() {
     <div>
       <Slider {...settings}>
         {docs.map((doc) => (
-          <div className="relative h-[90vh] " key={doc.image}>
+          <div className="relative h-[80vh] lg:h-[90vh] " key={doc.image}>
             <Image src={doc.image} alt="" fill className="object-cover" />
 
             <div className="absolute  inset-0 bg-gradient-to-r from-primary via-primary/70 to-transparent z-10"></div>
@@ -84,6 +84,7 @@ export default function Hero() {
                 </p>
               </div>
 
+              <a href="#admission">
               <button
                 className={clsx(
                   "mt-6 w-fit px-3 md:px-5 p-2 md:p-3 bg-white text-primary border-l-8 border-secondary  transition-transform ease-linear duration-300",
@@ -95,6 +96,7 @@ export default function Hero() {
               >
                 Take A Tour
               </button>
+              </a>
             </div>
           </div>
         ))}

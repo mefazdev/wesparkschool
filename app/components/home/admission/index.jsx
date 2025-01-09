@@ -6,7 +6,7 @@ import Features from "./Features";
 
 export default function Admission() {
   return (
-    <div className="-mt-16 mx-auto w-11/12 relative z-10  ">
+    <div className="-mt-16 mx-auto w-11/12 relative z-10  " id="admission">
       <Features />
 
       <div
