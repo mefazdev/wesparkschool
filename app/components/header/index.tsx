@@ -2,7 +2,7 @@ import { poppins } from '@/app/ui/fonts'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { FaFacebookSquare, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaFacebookSquare, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 import { IoMdCall } from 'react-icons/io'
 import { IoMail } from 'react-icons/io5'
@@ -25,9 +25,9 @@ export default function Header() {
               </div>
 
               <div className='flex gap-2 items-center'>
-                <a href=""><FaFacebookSquare /></a>
-                <a href=""><FaInstagram /></a>
-                <a href=""><FaXTwitter /></a><a href=""><FaLinkedin /></a>
+                <a target="_blank" href="https://www.facebook.com/bharatkatimes?mibextid=ZbWKwL"><FaFacebookSquare /></a>
+                <a target="_blank" href="https://www.instagram.com/we_spark_international_school/?igsh=MWc3bG44MndzOHJ1MQ%3D%3D"><FaInstagram /></a>
+                <a target="_blank" href="https://youtube.com/@wesparkinternationalschool?si=zNhQcvHQgqrxAYxe"><FaYoutube  className='text-lg'/></a> 
               </div>
             </div>
         </div>
@@ -40,13 +40,13 @@ export default function Header() {
           <nav className='hidden lg:grid'>
             <ul className='flex gap-2 lg:gap-4 font-semibold text-primary '>
                <Link href='/'>Home</Link>
-               <Link href='/about'>About</Link>
+               <Link href='/'>About</Link>
             
                <a href="https://forms.gle/2iZ2fDAm4YCtkWQv7" target="_blank">Admission</a>
                <Link href={'/'}> Our Team</Link>
-               <Link href='/blog'>News & Updates</Link>
-               <Link href='/blog'>Career</Link>
-               <Link href='/contact'>Contact</Link>
+               <Link href='/'>News & Updates</Link>
+               <Link href='/'>Career</Link>
+               <Link href='/'>Contact</Link>
              
             </ul>
           </nav>

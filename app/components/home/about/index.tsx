@@ -53,11 +53,11 @@ export default function About() {
               teaching, we empower students to thrive in an ever-changing world.
             </p>
             <div className=" m-auto mt-6 w-fit md:m-0 md:mt-8">
-              <Link className="" href={"/"}>
+              {/* <Link className="" href={"/"}> */}
                 <span className="text-white flex items-center gap-3 font-semibold ">
                   Read More <FaLongArrowAltRight className="text-xl mt-1" />
                 </span>
-              </Link>
+              {/* </Link> */}
             </div>{" "}
           </div>
           <div></div>

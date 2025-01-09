@@ -43,7 +43,13 @@ export default function Hero() {
       caption: "Shaping Minds, Sparking Success",
       title: "WE SPARK",
       subTitiel: "INTERNATIONAL SCHOOL",
-      image: "/images/students.jpg",
+      image: "/images/camp-2.jpg",
+    },
+    {
+      caption: "Shaping Minds, Sparking Success",
+      title: "WE SPARK",
+      subTitiel: "INTERNATIONAL SCHOOL",
+      image: "/images/camp-3.jpg",
     },
   ];
 
@@ -53,7 +59,7 @@ export default function Hero() {
     <div>
       <Slider {...settings}>
         {docs.map((doc) => (
-          <div className="relative h-[80vh] lg:h-[90vh] " key={doc.image}>
+          <div className="relative h-[70vh] lg:h-[90vh] " key={doc.image}>
             <Image src={doc.image} alt="" fill className="object-cover" />
 
             <div className="absolute  inset-0 bg-gradient-to-r from-primary via-primary/70 to-transparent z-10"></div>
