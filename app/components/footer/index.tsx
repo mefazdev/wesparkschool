@@ -1,9 +1,9 @@
 import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import React from "react";
-import { FaFacebookSquare, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { FaXTwitter, FaYoutube } from "react-icons/fa6";
+import { FaFacebookSquare, FaInstagram} from "react-icons/fa";
+import {  FaYoutube } from "react-icons/fa6";
 
 export default function Footer() {
   const features = [

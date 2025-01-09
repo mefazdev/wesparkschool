@@ -1,6 +1,6 @@
 import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import Features from "./Features";
