@@ -4,6 +4,16 @@ import cloudinary from "../../../../lib/cloudinary";
 
 export async function DELETE(req, { params }) {
   try {
+
+    if (!params || !params.id) {
+      return new Response(
+        JSON.stringify({ error: "ID parameter is required" }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+    }
     const { id } = params;
 
     const objectId = ObjectId.createFromHexString(id);
@@ -12,8 +22,22 @@ export async function DELETE(req, { params }) {
     const db = client.db("wespark");
 
     const news = await db.collection('news').findOne({_id:objectId})
-    const imageId = news.image.publicId
+    if (!news) {
+      return new Response(
+        JSON.stringify({ error: "News not found" }),
+        {
+          status: 404,
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+    }
 
+  
+    const imageId = news.image.publicId
+    if (imageId) {
+      await cloudinary.uploader.destroy(imageId);
+      console.log("Image deleted from Cloudinary:", imageId);
+    }
     // delete image from cloudinary
     if (imageId){
         await cloudinary.uploader.destroy(imageId, (error,result)=>{
