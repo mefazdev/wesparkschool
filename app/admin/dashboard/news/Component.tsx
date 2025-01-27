@@ -51,7 +51,7 @@ const Component: React.FC<CustomComponentProps> = ({ data }) => {
     setDeleting(_id);
 
     try {
-     await fetch(`/api/news/${_id}/delete`, {
+     await fetch(`${process.env.NEXT_PUBLIC_PORT}/api/news/${_id}/delete`, {
         method: "DELETE",
       });
 

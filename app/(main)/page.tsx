@@ -24,12 +24,4 @@ export default  async function Home() {
 }
 
 
-// async function getNewses() {
-//   const res = await fetch(`${process.env.NEXT_PUBLIC_PORT}/api/news/limit`,{
-//     // cache: 'no-store', 
-//   }); // Replace with your API or server call
-   
-//   const data = await res.json();
- 
-//   return data;
-// }
+
