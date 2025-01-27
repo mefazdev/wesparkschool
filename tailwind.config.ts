@@ -12,6 +12,9 @@ export default {
       
         lightPrime:'#192f59',
         primary:'#1b2945',
+        secondBlue:'#192f59',
+     
+    
         secondary:'#249d8a',
       },
     },

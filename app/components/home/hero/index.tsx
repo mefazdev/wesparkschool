@@ -2,11 +2,10 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import {   poppins  } from "@/app/ui/fonts";
+import { poppins  } from "@/app/ui/fonts";
 import Image from "next/image";
 import React, { useState } from "react";
- 
-import clsx from "clsx";
+ import clsx from "clsx";
 
 export default function Hero() {
  
@@ -62,7 +61,7 @@ export default function Hero() {
           <div className="relative h-[70vh] lg:h-[90vh] " key={doc.image}>
             <Image src={doc.image} alt="" fill className="object-cover" />
 
-            <div className="absolute  inset-0 bg-gradient-to-r from-primary via-primary/70 to-transparent z-10"></div>
+            <div className="absolute  inset-0 bg-gradient-to-r from-primary/30 via-primary/10 to-transparent z-10"></div>
             <div
               className={clsx(
                 "absolute inset-0 flex flex-col  justify-center text-white z-20 w-11/12 mx-auto transition-opacity  ease-linear duration-500",

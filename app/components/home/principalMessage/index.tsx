@@ -1,13 +1,20 @@
+'use client'
 import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function PrincipalMessage() {
+
+   useEffect(() => {
+      import("aos").then((aos) => {
+        aos.init({});
+      });
+    }, []);
   return (
-    <div className="mt-20 md:mt-32">
+    <div data-aos="fade-right"  className="mt-20 md:mt-32">
       <div className="px-4 lg:px-0 lg:w-11/12 xl:w-9/12 mx-auto">
         <div className="flex items-center">
-          <h5 className="text-xl md:text-2xl font-bold text-primary whitespace-nowrap">
+          <h5 className="text-xl md:text-2xl font-bold text-secondBlue whitespace-nowrap">
             Principal&apos;s Message
           </h5>
 

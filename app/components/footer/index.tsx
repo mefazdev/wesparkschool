@@ -1,5 +1,6 @@
 import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
+import Link from "next/link";
 // import Link from "next/link";
 import React from "react";
 import { FaFacebookSquare, FaInstagram} from "react-icons/fa";
@@ -25,7 +26,7 @@ export default function Footer() {
     "Creative and Cultural Spaces",
   ];
   return (
-    <div className="mt-20 md:mt-32">
+    <div>
       <div className={`${montserrat.className} bg-[#181818]  py-20 font-light`}>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 w-[86%] mx-auto text-white">
           <div className="border-b-2 pb-4 border-secondary">
@@ -72,14 +73,14 @@ export default function Footer() {
             <div className="mt-3 text-gray-300/80">
               <ul className="grid gap-2">
                 <li>
-                  {/* <Link href={"/"} className="hover:text-white"> */}
+                  <Link href={"/"} className="hover:text-white">
                   Home
-                  {/* </Link> */}
+                  </Link>
                 </li>
                 <li>
-                  {/* <Link href={"/"} className="hover:text-white"> */}
+                  <Link href={"/about"} className="hover:text-white">
                   About
-                  {/* </Link> */}
+                  </Link>
                 </li>
                 <li>
                   <a
@@ -96,9 +97,9 @@ export default function Footer() {
                   {/* </Link> */}
                 </li>
                 <li>
-                  {/* <Link href={"/"} className="hover:text-white"> */}
+                  <Link href={"/news"} className="hover:text-white">
                   News & Updates
-                  {/* </Link> */}
+                  </Link>
                 </li>
                 <li>
                   {/* <Link href={"/"} className="hover:text-white"> */}
@@ -106,9 +107,14 @@ export default function Footer() {
                   {/* </Link> */}
                 </li>
                 <li>
-                  {/* <Link href={"/"} className="hover:text-white"> */}
+                  <Link href={"/contact"} className="hover:text-white">
                   Contact
-                  {/* </Link> */}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={"/admin/login"} className="hover:text-white">
+               Admin
+                  </Link>
                 </li>
               </ul>
             </div>

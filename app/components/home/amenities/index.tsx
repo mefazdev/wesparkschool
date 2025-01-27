@@ -1,6 +1,6 @@
 "use client";
 import { montserrat } from "@/app/ui/fonts";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import {   FaCreativeCommons  } from "react-icons/fa";
  
 import { PiParkDuotone  } from "react-icons/pi";
@@ -28,6 +28,12 @@ const CustomButtonGroup: React.FC<ButtonGroupProps> = ({ next, previous }) => (
   </div>
 );
 export default function Amenities() {
+
+  useEffect(() => {
+      import("aos").then((aos) => {
+        aos.init({});
+      });
+    }, []);
   const docs = [
     {
       title: "Safety and Security",
@@ -95,7 +101,7 @@ export default function Amenities() {
     >
       <div className="absolute inset-0 z-10 bg-primary bg-opacity-90 group-hover:bg-opacity-70 group-hover:transition-opacity duration-400 ease-linear"></div>
 
-      <div className="lg:w-10/12 mx-auto z-20 relative">
+      <div data-aos="flip-up"  className="lg:w-10/12 mx-auto z-20 relative">
         <h4 className="text-xl md:text-2xl font-semibold text-center">School Amenities</h4>
         <div className="mt-8">
           <Carousel
