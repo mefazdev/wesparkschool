@@ -6,8 +6,10 @@ import News from "../components/home/news";
 import Amenities from "../components/home/amenities";
 
 export default  async function Home() {
-
-  const newses = await getNewses();
+  const res = await fetch(`${process.env.NEXT_PUBLIC_PORT}/api/news/limit`,{
+    // cache: 'no-store', 
+  });
+  const newses = await res.json();
   return (
    <div className="bg-white" >
        <Hero/>
@@ -22,12 +24,12 @@ export default  async function Home() {
 }
 
 
-async function getNewses() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_PORT}/api/news/limit`,{
-    // cache: 'no-store', 
-  }); // Replace with your API or server call
+// async function getNewses() {
+//   const res = await fetch(`${process.env.NEXT_PUBLIC_PORT}/api/news/limit`,{
+//     // cache: 'no-store', 
+//   }); // Replace with your API or server call
    
-  const data = await res.json();
+//   const data = await res.json();
  
-  return data;
-}
+//   return data;
+// }
