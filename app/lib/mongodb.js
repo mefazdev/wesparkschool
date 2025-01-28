@@ -1,7 +1,8 @@
  
 import { MongoClient } from 'mongodb';
 
-const uri = process.env.MONGODB_URI;  
+const uri = `mongodb+srv://fazdevcom:wzfDBEuDh99zOMnk@cluster0.s4mvc.mongodb.net/wespark?retryWrites=true&w=majority&appName=Cluster0`
+// process.env.MONGODB_URI;  
 let client;
 let clientPromise;
 
