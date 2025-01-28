@@ -1,27 +1,30 @@
- 
 import { MongoClient } from 'mongodb';
 
-const uri = `mongodb+srv://fazdevcom:wzfDBEuDh99zOMnk@cluster0.s4mvc.mongodb.net/wespark?retryWrites=true&w=majority&appName=Cluster0`
-// process.env.MONGODB_URI;  
+const uri = process.env.MONGODB_URI;
+
 let client;
 let clientPromise;
 
-if (!process.env.MONGODB_URI) {
-  throw new Error('Please add your Mongo URI to .env.local');
+if (!uri) {
+    throw new Error('Please add your Mongo URI to .env.local or Vercel Environment Variables.');
 }
 
-if (process.env.NODE_ENV === 'development') {
-  // In development mode, use a global variable to ensure that the connection
-  // is reused between hot reloads.
-  if (!global._mongoClientPromise) {
-    client = new MongoClient(uri);
-    global._mongoClientPromise = client.connect();
-  }
-  clientPromise = global._mongoClientPromise;
-} else {
-  // In production mode, it's best to not use a global variable
-  client = new MongoClient(uri);
-  clientPromise = client.connect();
+try {
+    if (process.env.NODE_ENV === 'development') {
+        // Reuse the connection in development to avoid hot-reload issues
+        if (!global._mongoClientPromise) {
+            client = new MongoClient(uri);
+            global._mongoClientPromise = client.connect();
+        }
+        clientPromise = global._mongoClientPromise;
+    } else {
+        // Fresh connection for production
+        client = new MongoClient(uri);
+        clientPromise = client.connect();
+    }
+} catch (error) {
+    console.error('MongoDB connection failed:', error.message);
+    throw new Error('Failed to connect to MongoDB');
 }
 
 export default clientPromise;

@@ -1,5 +1,6 @@
+'use client'
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { poppins } from "../../ui/fonts";
 import moment from "moment";
 import Link from "next/link";
@@ -15,10 +16,26 @@ type News = {
   image: Img;
   date: string;
 };
-export default async function News() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_PORT}/api/news`);
-  const newses = await res.json();
-
+export default  function News() {
+  // const res = await fetch(`${process.env.NEXT_PUBLIC_PORT}/api/news`);
+  // const newses = await res.json();
+  const [data,setData] = useState([]);
+    
+   const fetchData = async  ()=>{
+      try {
+        const res = await fetch(`/api/news/limit`,{
+          // cache: 'no-store',
+        });
+        const newses = await res.json();
+        setData(newses);
+      } catch (error) {
+        console.log(error)
+      }
+   }
+  
+   useEffect(() => {
+    fetchData()
+   }, [])
   const createSlug = (title: string) => {
     return title
       .toLowerCase()
@@ -49,7 +66,7 @@ export default async function News() {
 
       <div className="bg-gray-100 pb-40">
         <div className="pt-10 lg:pt-20 lg:w-10/12 px-4 lg:px-0 mx-auto grid md:grid-cols-2 gap-10 lg:gap-16">
-          {newses.map((news: News) => (
+          {data?.map((news: News) => (
             <div key={news.title}>
               <div className="relative h-[200px] lg:h-[300px]">
                 <Image
