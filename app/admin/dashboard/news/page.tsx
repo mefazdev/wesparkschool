@@ -5,7 +5,7 @@ import Component from "./Component";
  export default async function News() {
   const data = await getData();
  
- 
+//  helll
    return (
    <div className="bg-gray-50 min-h-screen">
      <div className="py-20 px-6 lg:px-6 lg:w-11/12 mx-auto ">
