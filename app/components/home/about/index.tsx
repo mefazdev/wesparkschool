@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import Features from "./Features";
+import Link from "next/link";
 
 export default function About() {
   useEffect(() => {
@@ -16,7 +17,7 @@ export default function About() {
       <div
         className="relative w-full  overflow-auto bg-cover bg-center   "
         style={{
-          backgroundImage: 'url("/images/camp.jpg")',
+          backgroundImage: 'url("/images/camp-2.jpg")',
 
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
@@ -61,11 +62,11 @@ export default function About() {
               teaching, we empower students to thrive in an ever-changing world.
             </p>
             <div className=" m-auto mt-6 w-fit md:m-0 md:mt-8">
-              {/* <Link className="" href={"/"}> */}
+              <Link className="" href={"/about"}>
               <span className="text-white flex items-center gap-3 font-semibold ">
                 Read More <FaLongArrowAltRight className="text-xl mt-1" />
               </span>
-              {/* </Link> */}
+              </Link>
             </div>{" "}
           </div>
           <div></div>

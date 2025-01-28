@@ -93,7 +93,7 @@ export default function Amenities() {
     <div
       className="bg-[#1b2434] relative text-white py-16 md:py-20  mt-20 md:mt-40 overflow-auto bg-cover bg-center"
       style={{
-        backgroundImage: 'url("/images/camp.jpg")',
+        backgroundImage: 'url("/images/camp-3.jpg")',
 
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
