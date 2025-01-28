@@ -45,9 +45,9 @@ const News: React.FC<CustomComponentProps> = ({ data }) => {
         <div className="flex-1 h-[2px] bg-gray-200 ml-4"></div>
       </div>
       <div className={` text-[15px] text-secondary mt-1`}>
-        {/* <Link href="/"> */}
+        <Link href="/news">
         View All News
-        {/* </Link> */}
+        </Link>
       </div>
 
       <div className="grid md:grid-cols-3 gap-10 md:gap-4 mt-10">
