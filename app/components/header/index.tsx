@@ -75,13 +75,13 @@ export default function Header() {
         </div>
 
         <div className="w-full bg-white">
-          <div className=" px-3 md:px-0 py-2 md:py-0 md:w-11/12  mx-auto flex justify-between items-center ">
-            <div className="h-16 w-36  xl:h-20 xl:w-52 relative">
-              <Image src={"/images/logo.png"} alt="" fill />
+          <div className=" px-3 md:px-0 py-2 md:py-1 md:w-11/12  mx-auto flex justify-between items-center ">
+            <div className="h-16 w-36  xl:h-[70px] xl:w-44 relative">
+              <Image src={"/images/logo.png"} alt="" fill className="object-cover" />
             </div>
 
             <nav className="hidden lg:grid">
-              <ul className="flex gap-2 lg:gap-4 text-[17px] text-primary font-semibold">
+              <ul className="flex gap-2 lg:gap-4  text-[17px] text-primary font-semibold">
                 <li className="group">
                   <Link href="/">Home</Link>
                   <div
@@ -140,16 +140,36 @@ export default function Header() {
                   ></div>
                 </li>
 
-                <li className="group">
-                  <Link href="/">Career</Link>
-                  <div
-                    className={clsx(
-                      "border border-secondary opacity-0 group-hover:opacity-100 transition-opacity ease-linear duration-200",
-                      {
-                        "opacity-100": pathName === "/career",
-                      }
-                    )}
-                  ></div>
+               
+                <li className="group relative cursor-pointer">  
+                  <span >
+                    {" "}
+                    Careers
+                    {/* <div
+                      className={clsx(
+                        "border border-secondary opacity-0 group-hover:opacity-100 transition-opacity ease-linear duration-200",
+                        {
+                          "opacity-100": pathName === "/career",
+                        }
+                      )}
+                    ></div> */}
+                    <div className="absolute shadow-lg text-[15px]   font-semibold rounded-b w-[180px] hidden group-hover:block  pt-4 bg-white  opacity-0 group-hover:opacity-100">
+                    <a href="https://forms.gle/PgUKUhCJsficqspj9" target="_blank"><div className=" hover:text-white hover:bg-secondary py-2 px-3 transition-colors ease-linear duration-300">
+                        
+                          <h5 className="inline">Become a Teacher</h5>
+                      
+                        
+                      </div>  </a>
+                      <a href="https://forms.gle/eB5wQ7apirLJ3Ut9A" target="_blank"> <div className=" hover:text-white hover:bg-secondary  py-2 px-3 transition-colors ease-linear duration-300">
+                    
+                          <h5 className="inline">Other Careers</h5>
+                       
+                        
+                      </div>
+                      </a>
+                      
+                    </div>
+                  </span>
                 </li>
 
                 <li className="group">

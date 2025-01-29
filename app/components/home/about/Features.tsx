@@ -101,7 +101,9 @@ export default function Features() {
 
   return (
     <div className="bg-[#1b2434] text-white py-10 md:py-20">
-      <div data-aos="flip-down" className="lg:w-10/12 mx-auto">
+      <div 
+      data-aos="fade-down" 
+      className="lg:w-10/12 mx-auto">
         <h4 className="text-xl md:text-2xl font-semibold text-center">
           Our Unique Features
         </h4>

@@ -35,7 +35,7 @@ const News: React.FC<CustomComponentProps> = ({ data }) => {
   }, []);
   return (
     <div
-      data-aos="flip-up"
+      data-aos="fade-up"
       className="mt-20 md:mt-32 px-6 lg:px-0 lg:w-[88%] mx-auto pb-32"
     >
       <div className="flex items-center">
@@ -46,7 +46,7 @@ const News: React.FC<CustomComponentProps> = ({ data }) => {
       </div>
       <div className={` text-[15px] text-secondary mt-1`}>
         <Link href="/news">
-        View All News
+        View All  
         </Link>
       </div>
 

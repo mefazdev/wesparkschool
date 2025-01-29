@@ -32,7 +32,7 @@ export default function Admission() {
 
         {/* Right Image and Content Section */}
         <div
-          data-aos="fade-left"
+          data-aos="fade-up"
           className="relative w-full  overflow-auto bg-cover bg-center"
           style={{
             backgroundImage: 'url("/images/camp.jpg")',

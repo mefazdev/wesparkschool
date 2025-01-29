@@ -7,9 +7,12 @@ import { AiOutlineClose } from "react-icons/ai";
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 export default function MobHeader() {
   const [menu, setMenu] = useState(false);
+ 
+  const [careers,setCareers]=useState(false)
   const pathName = usePathname();
 
   return (
@@ -136,20 +139,34 @@ export default function MobHeader() {
               News & Updates
             </div>
           </Link>
-          <a
-            // href="https://forms.gle/2iZ2fDAm4YCtkWQv7"
-            // target="_blank"
-            className="  text-base"
-            onClick={() => setMenu(false)}
-          >
-            <div
-              className={clsx(" p-2 rounded", {
-                "bg-white": pathName != "/career",
-              })}
+
+          <div className="bg-white p-2 rounded  relative flex items-center">
+            <button
+              className="flex gap-2 items-center w-full"
+              onClick={() => setCareers(!careers)}
             >
-              Career
-            </div>
-          </a>
+              Careers
+              <MdOutlineKeyboardArrowRight className="text-lg" />
+            </button>
+
+            {careers && (
+              <div className="  absolute right-0 top-0 mt-1 mr-2 w-7/12 p-3 rounded grid gap-1 bg-[#000000d2] ">
+                <a onClick={()=>setCareers(false)} href="https://forms.gle/PgUKUhCJsficqspj9" target="_blank">
+                  {" "}
+                  <div className="bg-secondary text-white  p-2 px-3 rounded">
+                    Becoma a Teacher
+                  </div>
+                </a>
+                <a onClick={()=>setCareers(false)}
+                  href="https://forms.gle/eB5wQ7apirLJ3Ut9A" target="_blank">
+                  <div className="bg-secondary text-white  p-2 px-3 rounded">
+                  Other Careers
+                  </div>
+                </a>
+                
+              </div>
+            )}
+          </div>
           <Link
             href={"/contact"}
             className="  text-base"

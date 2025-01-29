@@ -12,7 +12,7 @@ export default function PrincipalMessage() {
     }, []);
   return (
     <div data-aos="fade-right"  className="mt-20 md:mt-32">
-      <div className="px-4 lg:px-0 lg:w-11/12 xl:w-9/12 mx-auto">
+      <div className="px-6 lg:px-0 lg:w-11/12 xl:w-9/12 mx-auto">
         <div className="flex items-center">
           <h5 className="text-xl md:text-2xl font-bold text-secondBlue whitespace-nowrap">
             Principal&apos;s Message
@@ -37,7 +37,7 @@ export default function PrincipalMessage() {
             </p>
 
             <div className="md:float-en mt-4">
-              <p className="font-semibold text-secondary">Saiful Ameen PM</p>
+              <p className="font-semibold text-secondary uppercase tracking-wide">Saiful Ameen PM</p>
               <p className="text-gray-500">Principal, WeSpark International School</p>
             </div>
           </div>

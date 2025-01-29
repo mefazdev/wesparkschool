@@ -1,12 +1,15 @@
+'use client'
 import { montserrat } from "@/app/ui/fonts";
+import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 // import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { FaFacebookSquare, FaInstagram} from "react-icons/fa";
 import {  FaYoutube } from "react-icons/fa6";
 
 export default function Footer() {
+    const [careers,setCareers]=useState(false)
   const features = [
     "Personalized Education",
     "Language & Communication",
@@ -101,10 +104,31 @@ export default function Footer() {
                   News & Updates
                   </Link>
                 </li>
-                <li>
-                  {/* <Link href={"/"} className="hover:text-white"> */}
-                  Career
-                  {/* </Link> */}
+                <li className="relative">
+                  <button  className={clsx("hover:text-white",{
+                    "text-white font-semibold":careers
+                  })}
+                   onClick={() => setCareers(!careers)}>
+                  Careers
+                  </button>
+                   {careers && (
+                                <div className="  absolute left-20 -top-8         rounded  ">
+                                  <a onClick={()=>setCareers(false)} href="https://forms.gle/PgUKUhCJsficqspj9" target="_blank">
+                                    {" "}
+                                    <div className="bg-primary text-white  p-2 px-6 rounded-t hover:bg-secondary">
+                                      Become a Teacher
+                                    </div>
+                                  </a>
+                                
+                                  <a onClick={()=>setCareers(false)}
+                                    href="https://forms.gle/eB5wQ7apirLJ3Ut9A" target="_blank">
+                                    <div className="bg-primary text-white  p-2 px-6 rounded-b border-t border-secondary hover:bg-secondary" >
+                                    Other Careers
+                                    </div>
+                                  </a>
+                                  
+                                </div>
+                              )}
                 </li>
                 <li>
                   <Link href={"/contact"} className="hover:text-white">
@@ -143,7 +167,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className={`${montserrat.className} bg-[#202020] py-4`}>
+      <div className={`${montserrat.className} bg-[#202020] py-4 px-4`}>
         <div className="lg:w-[87%] mx-auto">
           <p className="text-gray-400 text-sm">
             Copyright All Right Reserved 2025

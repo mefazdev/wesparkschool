@@ -126,11 +126,11 @@ export default function About() {
 
       <div className="pt-4 md:pt-6 ">
         <div className="lg:w-10/12 mx-auto px-4 lg:px-0  ">
-          <h6 className="flex items-center text-[15px] text-gray-500">
+          {/* <h6 className="flex items-center text-[15px] text-gray-500">
             {" "}
             Home <IoMdArrowDropright className="text-xl text-gray-600" />{" "}
             <span className="text-secondary">About Us</span>
-          </h6>
+          </h6> */}
 
           <div className="grid lg:grid-cols-3 pt-5 md:pt-16   ">
             <div data-aos="fade-right" className="mt-6">

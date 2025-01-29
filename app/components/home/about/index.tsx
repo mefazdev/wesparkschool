@@ -25,7 +25,7 @@ export default function About() {
       >
         <div className="absolute inset-0 z-10 bg-primary bg-opacity-90 group-hover:bg-opacity-70 group-hover:transition-opacity duration-400 ease-linear"></div>
         <div
-          data-aos="flip-up"
+          data-aos="fade-up"
           className="grid lg:grid-cols-4 gap-7  py-10 md:py-20  relative z-20 lg:w-11/12 mx-auto px-4 lg:px-0"
         >
           <div>
@@ -67,9 +67,9 @@ export default function About() {
                 Read More <FaLongArrowAltRight className="text-xl mt-1" />
               </span>
               </Link>
-            </div>{" "}
+            </div> 
           </div>
-          <div></div>
+       
         </div>
       </div>
 
