@@ -123,7 +123,7 @@ export default function Footer() {
                                   <a onClick={()=>setCareers(false)}
                                     href="https://forms.gle/eB5wQ7apirLJ3Ut9A" target="_blank">
                                     <div className="bg-primary text-white  p-2 px-6 rounded-b border-t border-secondary hover:bg-secondary" >
-                                    Other Careers
+                                    Other Career
                                     </div>
                                   </a>
                                   
