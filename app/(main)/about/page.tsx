@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
-import { IoIosBody, IoMdArrowDropright } from "react-icons/io";
+import { IoIosBody  } from "react-icons/io";
 import { GiHealingShield } from "react-icons/gi";
 import { FaBrain, FaCreativeCommons, FaGlobeAmericas } from "react-icons/fa";
 import { PiTreePalm } from "react-icons/pi";
@@ -34,6 +34,7 @@ export default function About() {
       aos.init({});
     });
   }, []);
+  // hello
   const responsive = {
     superLargeDesktop: { breakpoint: { max: 4000, min: 1024 }, items: 3 },
     desktop: { breakpoint: { max: 1024, min: 768 }, items: 3 },
@@ -103,6 +104,8 @@ export default function About() {
       icon: <FaCreativeCommons className="text-secondary text-4xl" />,
     },
   ];
+
+  
 
   return (
     <div className="pb-20">
