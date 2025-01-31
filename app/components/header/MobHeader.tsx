@@ -145,7 +145,7 @@ export default function MobHeader() {
               className="flex gap-2 items-center w-full"
               onClick={() => setCareers(!careers)}
             >
-              Careers
+              Career
               <MdOutlineKeyboardArrowRight className="text-lg" />
             </button>
 

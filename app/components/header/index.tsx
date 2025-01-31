@@ -144,7 +144,7 @@ export default function Header() {
                 <li className="group relative cursor-pointer">  
                   <span >
                     {" "}
-                    Careers
+                    Career
                     {/* <div
                       className={clsx(
                         "border border-secondary opacity-0 group-hover:opacity-100 transition-opacity ease-linear duration-200",
