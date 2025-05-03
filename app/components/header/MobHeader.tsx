@@ -155,7 +155,7 @@ export default function MobHeader() {
                 <a onClick={()=>setCareers(false)} href="https://forms.gle/PgUKUhCJsficqspj9" target="_blank">
                   {" "}
                   <div className="bg-secondary text-white  p-2 px-3 rounded">
-                    Becom a Teacher
+                    Become a Teacher
                   </div>
                 </a>
                 <a onClick={()=>setCareers(false)}

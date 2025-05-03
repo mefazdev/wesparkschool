@@ -15,7 +15,7 @@ export default function Component() {
   }, []);
   return (
     <div className="pb-32">
-      <div className="relative h-[60vh] lg:h-[80vh] ">
+      <div className="relative h-[40vh]  ">
         <Image
           src={"/images/camp-1.jpg"}
           alt=""

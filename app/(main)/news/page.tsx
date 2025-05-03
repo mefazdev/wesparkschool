@@ -23,7 +23,7 @@ export default  function News() {
     
    const fetchData = async  ()=>{
       try {
-        const res = await fetch(`/api/news/limit`,{
+        const res = await fetch(`/api/news`,{
           // cache: 'no-store',
         });
         const newses = await res.json();
@@ -45,7 +45,7 @@ export default  function News() {
 
   return (
     <div>
-      <div className="relative h-[50vh] lg:h-[70vh] ">
+      <div className="relative h-[40vh]   ">
         <Image
           src={"/images/camp-3.jpg"}
           alt=""
