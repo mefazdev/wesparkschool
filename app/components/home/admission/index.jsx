@@ -17,6 +17,10 @@ export default function Admission() {
     <div className="-mt-16 mx-auto w-11/12 relative z-10  " id="admission">
       <Features />
 
+      {/* dfdff
+fds
+<fieldset><fieldset>dfd
+  ffd</fieldset></fieldset> */}
       <div
         className={`${poppins.className} grid grid-cols-1 lg:grid-cols-2   `}
       >
