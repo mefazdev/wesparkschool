@@ -5,11 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 // import Link from "next/link";
 import React, { useState } from "react";
-import { FaFacebookSquare, FaInstagram} from "react-icons/fa";
-import {  FaYoutube } from "react-icons/fa6";
+import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa6";
 
 export default function Footer() {
-    const [careers,setCareers]=useState(false)
+  const [careers, setCareers] = useState(false)
   const features = [
     "Personalized Education",
     "Language & Communication",
@@ -63,7 +63,7 @@ export default function Footer() {
                 <a target="_blank" href="https://www.instagram.com/we_spark_international_school/?igsh=MWc3bG44MndzOHJ1MQ%3D%3D">
                   <FaInstagram />
                 </a>
-                <a  target="_blank" href="https://youtube.com/@wesparkinternationalschool?si=zNhQcvHQgqrxAYxe">
+                <a target="_blank" href="https://youtube.com/@wesparkinternationalschool?si=zNhQcvHQgqrxAYxe">
                   <FaYoutube className="text-lg" />
                 </a>
               </div>
@@ -77,17 +77,17 @@ export default function Footer() {
               <ul className="grid gap-2">
                 <li>
                   <Link href={"/"} className="hover:text-white">
-                  Home
+                    Home
                   </Link>
                 </li>
                 <li>
                   <Link href={"/about"} className="hover:text-white">
-                  About
+                    About
                   </Link>
                 </li>
                 <li>
                   <a
-                    href="https://forms.gle/2iZ2fDAm4YCtkWQv7"
+                    href="https://forms.gle/BUxrmCVCcW3VS2Be7"
                     target="_blank"
                     className="hover:text-white"
                   >
@@ -101,43 +101,43 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link href={"/news"} className="hover:text-white">
-                  News & Updates
+                    News & Updates
                   </Link>
                 </li>
                 <li className="relative">
-                  <button  className={clsx("hover:text-white",{
-                    "text-white font-semibold":careers
+                  <button className={clsx("hover:text-white", {
+                    "text-white font-semibold": careers
                   })}
-                   onClick={() => setCareers(!careers)}>
-                  Career
+                    onClick={() => setCareers(!careers)}>
+                    Career
                   </button>
-                   {careers && (
-                                <div className="  absolute left-20 -top-8         rounded  ">
-                                  <a onClick={()=>setCareers(false)} href="https://forms.gle/PgUKUhCJsficqspj9" target="_blank">
-                                    {" "}
-                                    <div className="bg-primary text-white  p-2 px-6 rounded-t hover:bg-secondary">
-                                      Become a Teacher
-                                    </div>
-                                  </a>
-                                
-                                  <a onClick={()=>setCareers(false)}
-                                    href="https://forms.gle/eB5wQ7apirLJ3Ut9A" target="_blank">
-                                    <div className="bg-primary text-white  p-2 px-6 rounded-b border-t border-secondary hover:bg-secondary" >
-                                    Other Careers
-                                    </div>
-                                  </a>
-                                  
-                                </div>
-                              )}
+                  {careers && (
+                    <div className="  absolute left-20 -top-8         rounded  ">
+                      <a onClick={() => setCareers(false)} href="https://forms.gle/PgUKUhCJsficqspj9" target="_blank">
+                        {" "}
+                        <div className="bg-primary text-white  p-2 px-6 rounded-t hover:bg-secondary">
+                          Become a Teacher
+                        </div>
+                      </a>
+
+                      <a onClick={() => setCareers(false)}
+                        href="https://forms.gle/eB5wQ7apirLJ3Ut9A" target="_blank">
+                        <div className="bg-primary text-white  p-2 px-6 rounded-b border-t border-secondary hover:bg-secondary" >
+                          Other Careers
+                        </div>
+                      </a>
+
+                    </div>
+                  )}
                 </li>
                 <li>
                   <Link href={"/contact"} className="hover:text-white">
-                  Contact
+                    Contact
                   </Link>
                 </li>
                 <li>
                   <Link href={"/admin/login"} className="hover:text-white">
-               Admin
+                    Admin
                   </Link>
                 </li>
               </ul>

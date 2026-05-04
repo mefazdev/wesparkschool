@@ -105,7 +105,7 @@ export default function Header() {
                   ></div>
                 </li>
                 <li className="group">
-                  <a href="https://forms.gle/2iZ2fDAm4YCtkWQv7" target="_blank">
+                  <a href="https://forms.gle/BUxrmCVCcW3VS2Be7" target="_blank">
                     Admission
                   </a>
                   <div
@@ -140,8 +140,8 @@ export default function Header() {
                   ></div>
                 </li>
 
-               
-                <li className="group relative cursor-pointer">  
+
+                <li className="group relative cursor-pointer">
                   <span >
                     {" "}
                     Career
@@ -154,20 +154,20 @@ export default function Header() {
                       )}
                     ></div> */}
                     <div className="absolute shadow-lg text-[15px]   font-semibold rounded-b w-[180px] hidden group-hover:block  pt-4 bg-white  opacity-0 group-hover:opacity-100">
-                    <a href="https://forms.gle/PgUKUhCJsficqspj9" target="_blank"><div className=" hover:text-white hover:bg-secondary py-2 px-3 transition-colors ease-linear duration-300">
-                        
-                          <h5 className="inline">Become a Teacher</h5>
-                      
-                        
+                      <a href="https://forms.gle/PgUKUhCJsficqspj9" target="_blank"><div className=" hover:text-white hover:bg-secondary py-2 px-3 transition-colors ease-linear duration-300">
+
+                        <h5 className="inline">Become a Teacher</h5>
+
+
                       </div>  </a>
                       <a href="https://forms.gle/eB5wQ7apirLJ3Ut9A" target="_blank"> <div className=" hover:text-white hover:bg-secondary  py-2 px-3 transition-colors ease-linear duration-300">
-                    
-                          <h5 className="inline">Other Careers</h5>
-                       
-                        
+
+                        <h5 className="inline">Other Careers</h5>
+
+
                       </div>
                       </a>
-                      
+
                     </div>
                   </span>
                 </li>

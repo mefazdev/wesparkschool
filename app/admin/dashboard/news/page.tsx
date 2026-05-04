@@ -10,7 +10,7 @@ import Component from "./Component";
     
    const fetchData = async  ()=>{
       try {
-        const res = await fetch(`/api/news/limit`,{
+        const res = await fetch(`/api/news`,{
           // cache: 'no-store',
         });
         const newses = await res.json();

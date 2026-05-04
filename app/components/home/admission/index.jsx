@@ -9,7 +9,7 @@ export default function Admission() {
   useEffect(() => {
     import("aos").then((aos) => {
       aos.init({
-         
+
       });
     });
   }, []);
@@ -63,7 +63,7 @@ export default function Admission() {
 
             <div className="mt-8">
               <a
-                href="https://forms.gle/2iZ2fDAm4YCtkWQv7"
+                href="https://forms.gle/BUxrmCVCcW3VS2Be7"
                 target="_blank"
                 className="bg-secondary p-2 md:p-3 px-4 md:px-7 text-white "
               >
