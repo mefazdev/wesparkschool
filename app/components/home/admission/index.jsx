@@ -47,7 +47,7 @@ export default function Admission() {
               Apply for Admission
             </h5>
             <p className="md:text-lg font-semibold text-secondary mt-3">
-              Fall 2025 applications are now open
+              Fall 2026 applications are now open
             </p>
 
             <p
